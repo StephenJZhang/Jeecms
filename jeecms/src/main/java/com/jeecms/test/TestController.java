@@ -15,13 +15,16 @@ import java.io.InputStream;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/test")
 public class TestController {
-
+    private static Logger log  = LoggerFactory.getLogger(TestController.class);
+	
 	@RequestMapping("/test")
     public Object test() throws Exception {
 		
